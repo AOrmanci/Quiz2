@@ -4,6 +4,7 @@ let activeQuestionIndex = 0,
     questionsCount = 0,
     selectedAnswer,
     totalCorrectChoice = 0;
+const quizModalEl = document.querySelector(".quiz_modal");
 const getQuestions = () => {
     fetch("./quiz2sorular.json")
         .then((res) => {
@@ -21,6 +22,9 @@ const updateQuizOrder = () => {
     quizOrderEl.innerHTML = activeQuestionIndex + "/" + questionsCount;
     let quizProgressEl = document.querySelector(".quiz_prgoress");
     quizOrderEl.style.width = (activeQuestionIndex / questionsCount) * 100 + "%";
+    if (activeQuestionIndex == questionsCount - 1) {
+        document.querySelector(".quiz_btn").innerHTML = "BİTİR";
+    }
     updateQuestion();
 };
 const createQuestionAnswers = (activeQuestion) => {
@@ -46,7 +50,7 @@ return questionAnswersHTML;
 const updateQuestion = () => {
     const activeQuestion = QUESTİON[activeQuestionIndex];
 
-    let questionHTMl = '<h1>$ { activeQuestionIndex + 1 } - $ { activeQuestion.text } < /h1><div class="question_answers">${createQuestionAnswers(activeQuestion)}</div>';
+    let questionHTMl = '<h1>$ { activeQuestionIndex+1} - $ { activeQuestion.text } < /h1><div class="question_answers">${createQuestionAnswers(activeQuestion)}</div>';
     const questionContainerEl = document.querySelector("#questionContainer ");
     questionContainerEl.innerHTML = questionHTMl;
 
@@ -60,19 +64,41 @@ const selectChoice = (el) => {
     el.classList.add("selected");
 };
 const checkAnswer = () => {
-        QUESTİON[activeQuestionIndex].answers.find(a => {
-            if (a.isCorrect) totalCorrectChoice++;
-        });
-        const nextQuestion = () => {
-            if (selectedAnswer) {
-                checkAnswer();
-                updateQuestion();
-            } else {
-                window.alert("Lütfen bir seçim yapınız.");
-            }
-        };
+    const selectedAnswerObj = QUESTİON[activeQuestionIndex].answers.find(a => a.id == selectedAnswer);
+    if (selectedAnswerObj.isCorrect) totalCorrectChoice++;
+    QUESTİON[activeQuestionIndex].answers.find(a => {
+        if (a.id == selectedAnswer) totalCorrectChoice++;
+    });
+};
+const nextQuestion = () => {
+    if (selectedAnswer) {
+        checkAnswer();
+        if (activeQuestionIndex < questionsCount - 1) {
+            activeQuestionIndex++;
 
-        getQuestions();
-        setTimeout(() => {
             updateQuizOrder();
-        }, 100);
+        } else {
+            document.querySelector("#totalCorrectChoice").innerHTML = totalCorrectChoice;
+            quizModalEl.classList.add("show");
+        }
+    } else { window.alert("Lütfen Bir Seçim Yapınız."); }
+
+
+};
+const closeModal = () => {
+    quizModalEl.classList.remove("show");
+};
+const repeatQuiz = () => {
+    (activeQuestionIndex = 0),
+    (questionsCount = 0),
+    selectedAnswer = undefined;
+    (totalCorrectChoice = 0);
+    updateQuizOrder();
+    closeModal();
+    document.querySelector(".quiz_btn").innerHTML = "NEXT";
+}
+
+getQuestions();
+setTimeout(() => {
+    updateQuizOrder();
+}, 100);
