@@ -1,0 +1,180 @@
+[{
+        "id": 1,
+        "text": "HTML, hangi programlama dili kullanılarak yazılır?",
+        "answers": [{
+                "id": 1,
+                "text": "Css",
+                "isCorrect": false
+            },
+            {
+                "id": 2,
+                "text": "JavaScript",
+                "isCorrect": false
+            },
+            {
+                "id": 3,
+                "text": "Python",
+                "isCorrect": false
+            },
+            {
+                "id": 4,
+                "text": "Markup Language",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "text": "CSS'in açılımı nedir?",
+        "answers": [{
+                "id": 5,
+                "text": "Cascading Style Sheets",
+                "isCorrect": true
+            },
+            {
+                "id": 6,
+                "text": "Computer Style Sheets",
+                "isCorrect": false
+            },
+            {
+                "id": 7,
+                "text": "Creative Style Sheets",
+                "isCorrect": false
+            },
+            {
+                "id": 8,
+                "text": "Colorful Style Sheets",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "text": "JavaScript hangi türde bir dildir?",
+        "answers": [{
+                "id": 9,
+                "text": "Programlama",
+                "isCorrect": true
+            },
+            {
+                "id": 10,
+                "text": "İşletim",
+                "isCorrect": false
+            },
+            {
+                "id": 11,
+                "text": "Web Tarayıcı",
+                "isCorrect": false
+            },
+            {
+                "id": 12,
+                "text": "Veritabanı",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "text": "HTML elementlerini biçimlendirmek için kullanılan dil hangisidir?",
+        "answers": [{
+                "id": 13,
+                "text": "CSS",
+                "isCorrect": true
+            },
+            {
+                "id": 14,
+                "text": "XML",
+                "isCorrect": false
+            },
+            {
+                "id": 15,
+                "text": "Python",
+                "isCorrect": false
+            },
+            {
+                "id": 16,
+                "text": "JavaScript",
+                "isCorrect": false
+            }
+        ]
+    }, {
+        "id": 5,
+        "text": "Hangi HTML etiketi sayfa içeriğini başlık olarak tanımlar?",
+        "answers": [
+            { "id": 17, "text": "<header>", "isCorrect": false },
+            { "id": 18, "text": "<title>", "isCorrect": true },
+            { "id": 19, "text": "<h1>", "isCorrect": false },
+            { "id": 20, "text": "<section>", "isCorrect": false }
+        ]
+    },
+    {
+        "id": 6,
+        "text": "CSS ile hangi özellikleri elementlere ekleyebiliriz?",
+        "answers": [
+            { "id": 21, "text": "Stil", "isCorrect": true },
+            { "id": 22, "text": "Fonksiyon", "isCorrect": false },
+            { "id": 23, "text": "Veri Tabanı", "isCorrect": false },
+            { "id": 24, "text": "Sunum", "isCorrect": false }
+        ]
+    },
+    {
+        "id": 7,
+        "text": "JavaScript ile tarayıcıda neler yapabiliriz?",
+        "answers": [
+            { "id": 25, "text": "Dinamik içerik oluşturmak", "isCorrect": true },
+            { "id": 26, "text": "Dosya sıkıştırmak", "isCorrect": false },
+            { "id": 27, "text": "Veritabanı yönetmek", "isCorrect": false },
+            { "id": 28, "text": "Güvenlik duvarı oluşturmak", "isCorrect": false }
+        ]
+    },
+    {
+        "id": 8,
+        "text": "Hangi HTML etiketi düz metin içeriğini temsil eder?",
+        "answers": [
+            { "id": 29, "text": "<text>", "isCorrect": false },
+            { "id": 30, "text": "<p>", "isCorrect": true },
+            { "id": 31, "text": "<plain>", "isCorrect": false },
+            { "id": 32, "text": "<content>", "isCorrect": false }
+        ]
+    },
+    {
+        "id": 9,
+        "text": "CSS'de hangi seçici türü elementin bir ID'sine göre biçimlendirme yapar?",
+        "answers": [
+            { "id": 33, "text": "Class Seçici", "isCorrect": false },
+            { "id": 34, "text": "Tag Seçici", "isCorrect": false },
+            { "id": 35, "text": "ID Seçici", "isCorrect": true },
+            { "id": 36, "text": "Parent Seçici", "isCorrect": false }
+        ]
+    },
+    {
+        "id": 10,
+        "text": "JavaScript'te 'DOM' kısaltması neyi ifade eder?",
+        "answers": [
+            { "id": 37, "text": "Data Object Model", "isCorrect": false },
+            { "id": 38, "text": "Document Object Model", "isCorrect": true },
+            { "id": 39, "text": "Dynamic Operation Module", "isCorrect": false },
+            { "id": 40, "text": "Digital Output Mechanism", "isCorrect": false }
+        ]
+    },
+    {
+        "id": 11,
+        "text": "Hangi HTML etiketi numaralandırılmış bir liste oluşturur?",
+        "answers": [
+            { "id": 41, "text": "<ul>", "isCorrect": false },
+            { "id": 42, "text": "<list>", "isCorrect": false },
+            { "id": 43, "text": "<dl>", "isCorrect": false },
+            { "id": 44, "text": "<ol>", "isCorrect": true }
+        ]
+    },
+    {
+        "id": 12,
+        "text": "CSS'de 'margin' özelliği ne için kullanılır?",
+        "answers": [
+            { "id": 45, "text": "Metin boyutunu ayarlamak", "isCorrect": false },
+            { "id": 46, "text": "Arka plan rengini belirlemek", "isCorrect": false },
+            { "id": 47, "text": "Kenar boşluğunu ayarlamak", "isCorrect": true },
+            { "id": 48, "text": "Yazı tipini değiştirmek", "isCorrect": false }
+        ]
+    }
+]
