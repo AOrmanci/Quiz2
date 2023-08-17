@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmet Ormancı | Quiz Uygulaması</title>
-    <link rel="stylesheet" href="quiz2style.css" />
+    <link rel="stylesheet" href="quiz2style.css">
 </head>
 
 <body>
+
     <div class="quiz_container">
         <h2 id="quizOrder"></h2>
+        <div class="timer_container">
+            <div class="timer"></div>
+            <div class="countdown">20</div>
+            <!-- Geri sayım süresi burada görüntülenecek -->
+        </div>
+
         <!---Progress Start-->
         <div class="quiz__progress--container">
             <div class="quiz__progress"></div>
@@ -18,8 +25,9 @@
         <!---Progress End-->
         <!---Questions Start-->
         <div class="question_body">
-            <div id="question_container">
-            </div>
+            <div id="questionContainer"></div>
+            <div class="alert" style="display: none;">Lütfen Bir Seçim Yapınız.</div>
+
             <button class="quiz_next-btn" onclick="nextQuestion()">
                 NEXT
             </button>
@@ -27,15 +35,15 @@
         <!---Questions END-->
         <div class="quiz_modal">
             <div class="quiz_modal-body">
-                <img class="modal_close" src="C:\Users\ahmto\OneDrive\Masaüstü\web proje quiz./kapat.png" />
-                <img src="C:\Users\ahmto\OneDrive\Masaüstü\web proje quiz./konfeti.png" />
-                <p class="modal_text"> Tebrikler,<span id="TotalCorrectChoice">3</span>Doğru Seçeneğin var</p>
-                <button class="quiz_btn">Quizi Tekrar Başlat</button>
-
+                <img class="modal_close" src="https://www.edding.com/fileadmin/templates/templates-alphabet/template-letter-x.svg" onclick="closeModal()" />
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/26/Party_Popper_Emojipedia.png" />
+                <p class="modal_text">Tebrikler,<span id="totalCorrectChoice">3</span> Doğru Seçeneğin var</p>
+                <button class="quiz_btn" onclick="repeatQuiz()">Quizi Tekrar Başlat</button>
             </div>
         </div>
     </div>
     <script src="quiz2.js"></script>
 </body>
+
 
 </html>
