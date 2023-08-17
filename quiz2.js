@@ -1,6 +1,6 @@
 const CHOICES = ["A", "B", "C", "D"];
 let QUESTİON = [];
-let activeQuestionIndex = 11,
+let activeQuestionIndex = 0,
     questionsCount = 0,
     selectedAnswer,
     totalCorrectChoice = 0;
